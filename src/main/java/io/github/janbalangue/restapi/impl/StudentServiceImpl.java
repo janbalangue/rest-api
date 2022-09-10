@@ -4,10 +4,12 @@ import io.github.janbalangue.restapi.model.Student;
 import io.github.janbalangue.restapi.repository.StudentRepository;
 import io.github.janbalangue.restapi.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 
     @Autowired

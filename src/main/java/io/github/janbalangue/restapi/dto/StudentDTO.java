@@ -1,28 +1,16 @@
-package io.github.janbalangue.restapi.model;
+package io.github.janbalangue.restapi.dto;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import javax.validation.constraints.NotNull;
-import java.util.List;
 
 @Data
-@Document
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @AllArgsConstructor
-public class Student {
-
-    @Id
+public class StudentDTO {
     private String id;
-
-    @NotNull
     private String firstName;
-
-    @NotNull
     private String lastName;
 
     public enum Grade {
