@@ -24,5 +24,7 @@ public class Student {
     @NotNull
     private String lastName;
 
-    private String grade;
+    public enum Grade {
+        A, B, C, D, F
+    }
 }

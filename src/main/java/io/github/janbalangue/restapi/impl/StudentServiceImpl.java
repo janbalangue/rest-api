@@ -30,7 +30,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<Student> findByGrade(String grade) {
+    public List<Student> findByGrade(Student.Grade grade) {
         return studentRepository.findByGrade(grade);
     }
 

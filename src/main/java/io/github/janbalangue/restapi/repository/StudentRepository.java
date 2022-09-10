@@ -10,5 +10,5 @@ public interface StudentRepository extends MongoRepository<Student, String> {
 
     Optional<Student> findById(String id);
     Student findByFirstNameAndLastName(String firstName, String lastName);
-    List<Student> findByGrade(String grade);
+    List<Student> findByGrade(Student.Grade grade);
 }
