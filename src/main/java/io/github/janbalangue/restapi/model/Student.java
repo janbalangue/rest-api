@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Data
-@Document(collection = "students")
+@Document
 @NoArgsConstructor
 @AllArgsConstructor
 public class Student {
