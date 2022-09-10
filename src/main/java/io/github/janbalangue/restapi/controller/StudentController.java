@@ -1,13 +1,14 @@
 package io.github.janbalangue.restapi.controller;
 
 import io.github.janbalangue.restapi.dto.StudentDTO;
+import io.github.janbalangue.restapi.model.Student;
+import io.github.janbalangue.restapi.model.Student.Grade;
 import io.github.janbalangue.restapi.service.StudentService;
 import io.github.janbalangue.restapi.util.ObjectMapperUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,4 +29,14 @@ public class StudentController {
         return ObjectMapperUtils.map(studentService.findById(id), StudentDTO.class);
     }
 
+    @GetMapping(value = "/byGrade/{grade}")
+    public StudentDTO getStudentByGrade(@PathVariable("grade") Grade grade) {
+        return ObjectMapperUtils.map(studentService.findByGrade(grade), StudentDTO.class);
+    }
+
+    @PostMapping(value = "/save")
+    public ResponseEntity<?> saveOrUpdateStudent(@RequestBody StudentDTO studentDTO) {
+        studentService.saveOrUpdateStudent(ObjectMapperUtils.map(studentDTO, Student.class));
+        return new ResponseEntity("Student added successfully", HttpStatus.OK);
+    }
 }
