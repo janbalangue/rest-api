@@ -10,8 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class StudentDTO {
     private String id;
-    private String firstName;
-    private String lastName;
+    private String name;
 
     public enum Grade {
         A, B, C, D, F

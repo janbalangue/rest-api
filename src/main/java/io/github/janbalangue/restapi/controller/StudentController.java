@@ -5,6 +5,7 @@ import io.github.janbalangue.restapi.service.StudentService;
 import io.github.janbalangue.restapi.util.ObjectMapperUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,4 +22,10 @@ public class StudentController {
     public List<StudentDTO> getAllStudents() {
         return ObjectMapperUtils.mapAll(studentService.findAll(), StudentDTO.class);
     }
+
+    @GetMapping(value = "/byId/{id}")
+    public StudentDTO getStudentById(@PathVariable("id") String id) {
+        return ObjectMapperUtils.map(studentService.findById(id), StudentDTO.class);
+    }
+
 }

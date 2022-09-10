@@ -20,10 +20,7 @@ public class Student {
     private String id;
 
     @NotNull
-    private String firstName;
-
-    @NotNull
-    private String lastName;
+    private String name;
 
     public enum Grade {
         A, B, C, D, F
