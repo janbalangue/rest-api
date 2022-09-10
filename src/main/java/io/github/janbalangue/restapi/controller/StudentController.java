@@ -29,6 +29,10 @@ public class StudentController {
         return ObjectMapperUtils.map(studentService.findById(id), StudentDTO.class);
     }
 
+    @GetMapping(value = "/byName/{name}")
+    public StudentDTO getStudentByName(@PathVariable("name") String name) {
+        return ObjectMapperUtils.map(studentService.findByName(name), StudentDTO.class);
+    }
     @GetMapping(value = "/byGrade/{grade}")
     public StudentDTO getStudentByGrade(@PathVariable("grade") Grade grade) {
         return ObjectMapperUtils.map(studentService.findByGrade(grade), StudentDTO.class);
