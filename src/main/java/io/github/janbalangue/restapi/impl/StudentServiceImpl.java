@@ -31,10 +31,6 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.findByName(name);
     }
 
-    @Override
-    public List<Student> findByGrade(Student.Grade grade) {
-        return studentRepository.findByGrade(grade);
-    }
 
     @Override
     public Student saveOrUpdateStudent(Student student) {

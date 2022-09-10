@@ -10,7 +10,6 @@ public interface StudentService {
     List<Student> findAll();
     Optional<Student> findById(String id);
     Student findByName(String name);
-    List<Student> findByGrade(Student.Grade grade);
     Student saveOrUpdateStudent(Student student);
     void deleteStudentById(String id);
 }

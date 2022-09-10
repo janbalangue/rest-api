@@ -8,6 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Data
@@ -22,7 +23,7 @@ public class Student {
     @NotNull
     private String name;
 
-    public enum Grade {
-        A, B, C, D, F
-    }
+    @NotNull
+    @Size(min=1, max=2)
+    private String grade;
 }

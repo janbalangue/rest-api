@@ -11,8 +11,5 @@ import lombok.NoArgsConstructor;
 public class StudentDTO {
     private String id;
     private String name;
-
-    public enum Grade {
-        A, B, C, D, F
-    }
+    private String grade;
 }
