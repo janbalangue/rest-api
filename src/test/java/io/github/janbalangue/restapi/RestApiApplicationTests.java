@@ -1,4 +1,4 @@
-package com.example.restapi;
+package io.github.janbalangue.restapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

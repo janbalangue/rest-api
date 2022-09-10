@@ -1,4 +1,4 @@
-package com.example.restapi;
+package io.github.janbalangue.restapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
