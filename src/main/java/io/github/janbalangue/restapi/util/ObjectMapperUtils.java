@@ -1,7 +1,5 @@
 package io.github.janbalangue.restapi.util;
 
-import io.github.janbalangue.restapi.dto.StudentDTO;
-import io.github.janbalangue.restapi.model.Student;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
